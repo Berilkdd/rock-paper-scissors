@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=<h1>, initial-scale=1.0">
+    <title>Rock-paper-scissors</title>
+    <!-- font awesome and google fonts -->
+    <script src="https://kit.fontawesome.com/c1eb0bcc3f.js" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Kirang+Haerang&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+    <h1 id="header-1">Ready?</h1>
+    <h2 class="header-message" id="header-2">choose rock, paper or scissors to start!</h1>
+    <div class="game-area">
+    <div class="player-side">
+        <img id="rock-left" src="assets/images/rock-left.jpg" alt="Rock Left">
+        <img id="paper-left" src="assets/images/paper-left.jpg" alt="Paper Left" class="hidden">
+        <img id="scissors-left" src="assets/images/scissors-left.jpg" alt="Scissors Left" class="hidden">
+    </div>
+
+    <div class="computer-side">
+        <img id="rock-right" src="assets/images/rock-right.jpg" alt="Rock Right">
+        <img id="paper-right" src="assets/images/paper-right.jpg" alt="Paper Right" class="hidden">
+        <img id="scissors-right" src="assets/images/scissors-right.jpg" alt="Scissors Right" class="hidden">
+    </div>
+
+    <div id="scoreboard">
+    <p>WON: <span id="player-score">0</span></p>
+    <p>LOST: <span id="computer-score">0</span></p>
+    <p>DRAW: <span id="computer-score">0</span></p>
+    </div>
+
+    <p id="player-message">Make your move!</p>
+
+    <div class="choices">
+    <img src="assets/images/rock-left.jpg" id="rock" alt="Rock" class="choice-btn">
+    <img src="assets/images/paper-left.jpg" id="paper" alt="Paper" class="choice-btn">
+    <img src="assets/images/scissors-left.jpg" id="scissors" alt="Scissors" class="choice-btn">
+    </div>
+
+    </div>
+
+    
+
+    <script src="script.js"></script>
+
+</body>
+</html>
