@@ -1,15 +1,15 @@
 
 .player-side {
-  justify-self: start;   /* align image to the left edge of its grid cell */
+  justify-self: start;   
 }
 
 .computer-side {
-  justify-self: end;     /* align image to the right edge of its grid cell */
+  justify-self: end;     
 }
 
 .player-side img,
 .computer-side img {
-  max-width: 160px;   /* size of the big hands */
+  max-width: 160px;   
   width: 100%;
   height: auto;
   display: block;
@@ -18,7 +18,33 @@
 
 .hands-row {
   display: flex;
-  justify-content: space-between; /* pushes one left, one right */
-  align-items: center;             /* aligns them on the same vertical line */
+  justify-content: space-between; 
+  align-items: center;             
   margin-bottom: 16px;
+}
+
+.choices {
+  display: flex;
+  justify-content: center;   
+  align-items: center;
+  gap: 16px;                 
+  margin: 18px 0;
+}
+
+.choice-btn {
+  width: 40px;               
+  height: 40px;
+  object-fit: cover;
+  border: 2px solid #333;
+  border-radius: 30px;
+  padding: 6px;
+  cursor: pointer;
+}
+
+.choice-btn:hover {
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+.choice-btn:active {
+  transform: scale(0.9);
 }
