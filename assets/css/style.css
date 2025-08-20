@@ -1,0 +1,24 @@
+
+.player-side {
+  justify-self: start;   /* align image to the left edge of its grid cell */
+}
+
+.computer-side {
+  justify-self: end;     /* align image to the right edge of its grid cell */
+}
+
+.player-side img,
+.computer-side img {
+  max-width: 160px;   /* size of the big hands */
+  width: 100%;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+}
+
+.hands-row {
+  display: flex;
+  justify-content: space-between; /* pushes one left, one right */
+  align-items: center;             /* aligns them on the same vertical line */
+  margin-bottom: 16px;
+}
