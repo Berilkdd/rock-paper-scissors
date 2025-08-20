@@ -1,3 +1,36 @@
+/* CSS Variables */
+:root {
+    --primary-font: "Inter", sans-serif; 
+}
+
+h1 {
+  margin: 6px 0 10px;
+  font-size: 22px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  font-family: "Kirang Haerang", system-ui;
+  text-align: center;
+}
+
+h2 {
+  margin: 0 0 18px;
+  font-size: 14px;
+  text-transform: lowercase;
+  letter-spacing: 1px;
+  opacity: 0.8;
+  font-family: "Kirang Haerang", system-ui;
+  text-align: center;
+}
+
+p {
+margin: 6px 0 10px;
+  font-size: 15px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  font-family: "Kirang Haerang", system-ui;
+  text-align: center;
+
+}
 
 .player-side {
   justify-self: start;   
