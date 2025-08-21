@@ -81,3 +81,7 @@ margin: 6px 0 10px;
 .choice-btn:active {
   transform: scale(0.9);
 }
+
+img.hidden {
+  display: none !important;
+}
