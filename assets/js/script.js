@@ -20,6 +20,7 @@ showOnlyLeft(choice);
 const computerChoice = getComputerChoice();
 const result = getResult(choice, computerChoice);
 updateScore(result);
+updateMessage(result);
 
 console.log(choice, computerChoice, result);
 }
@@ -75,5 +76,22 @@ function updateScore(result) {
   } else if (result === "draw") {
     drawScore++;
     document.getElementById("draw-score").textContent = drawScore;
+  }
+}
+
+function updateMessage(result) {
+  const header1 = document.getElementById("header-1");
+  const header2 = document.getElementById("header-2");
+  const playerMessage = document.getElementById("player-message");
+
+  if (result === "win") {
+    header1.textContent = "VICTORY!";
+    header2.textContent = "YOU CRUSHED THE COMPUTER";
+  } else if (result === "lose") {
+    header1.textContent = "OUCH!";
+    header2.textContent = "BETTER LUCK NEXT TIME";
+  } else if (result === "draw") {
+    header1.textContent = "DRAW!";
+    header2.textContent = "TRY AGAIN FOR GLORY";
   }
 }
