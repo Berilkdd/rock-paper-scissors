@@ -1,3 +1,7 @@
+let playerScore = 0;
+let computerScore = 0;
+let drawScore = 0;
+
 document.addEventListener('DOMContentLoaded', () => {
   
   showOnlyLeft('rock');
@@ -15,8 +19,9 @@ showOnlyLeft(choice);
 
 const computerChoice = getComputerChoice();
 const result = getResult(choice, computerChoice);
+updateScore(result);
 
-console.log(choice, computerChoice);
+console.log(choice, computerChoice, result);
 }
 
 
@@ -46,4 +51,29 @@ function showOnlyRight(choice) {
   document.getElementById(`${choice}-right`).classList.remove('hidden');
 }
 
+function getResult(playerChoice, computerChoice) {
+  if (playerChoice === computerChoice) {
+    return "draw";
+  } else if (playerChoice === "rock" && computerChoice === "scissors") {
+    return "win";
+  } else if (playerChoice === "paper" && computerChoice === "rock") {
+    return "win";
+  } else if (playerChoice === "scissors" && computerChoice === "paper") {
+    return "win";
+  } else {
+    return "lose";
+  }
+}
 
+function updateScore(result) {
+  if (result === "win") {
+    playerScore++;
+    document.getElementById("player-score").textContent = playerScore;
+  } else if (result === "lose") {
+    computerScore++;
+    document.getElementById("computer-score").textContent = computerScore;
+  } else if (result === "draw") {
+    drawScore++;
+    document.getElementById("draw-score").textContent = drawScore;
+  }
+}
