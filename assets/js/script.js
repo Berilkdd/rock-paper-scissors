@@ -9,12 +9,12 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 });
 
-
 function getPlayerChoice(choice) {
   
 showOnlyLeft(choice);
 
 const computerChoice = getComputerChoice();
+const result = getResult(choice, computerChoice);
 
 console.log(choice, computerChoice);
 }
@@ -34,7 +34,6 @@ function getComputerChoice() {
   return choice; 
 }
 
-
 function showOnlyLeft(choice) {
   const ids = ['rock-left', 'paper-left', 'scissors-left'];
   ids.forEach(id => document.getElementById(id).classList.add('hidden'));
@@ -46,4 +45,5 @@ function showOnlyRight(choice) {
   ids.forEach(id => document.getElementById(id).classList.add('hidden'));
   document.getElementById(`${choice}-right`).classList.remove('hidden');
 }
+
 
