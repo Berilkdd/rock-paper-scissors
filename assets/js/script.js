@@ -8,9 +8,12 @@ document.addEventListener('DOMContentLoaded', () => {
   showOnlyRight('rock');
 
   
-  document.querySelectorAll('.choice-btn').forEach(btn => {
-    btn.addEventListener('click', () => getPlayerChoice(btn.id));
-  });
+document.querySelectorAll('.choice-btn').forEach(btn => {
+btn.addEventListener('click', () => getPlayerChoice(btn.id));
+
+});
+
+document.getElementById("restart-btn").addEventListener("click", restartGame);
 });
 
 function getPlayerChoice(choice) {
@@ -94,4 +97,22 @@ function updateMessage(result) {
     header1.textContent = "DRAW!";
     header2.textContent = "TRY AGAIN FOR GLORY";
   }
+}
+
+function restartGame() {
+  
+  playerScore = 0;
+  computerScore = 0;
+  drawScore = 0;
+
+  
+  document.getElementById("player-score").textContent = playerScore;
+  document.getElementById("computer-score").textContent = computerScore;
+  document.getElementById("draw-score").textContent = drawScore;
+
+  showOnlyLeft("rock");
+  showOnlyRight("rock");
+
+  document.getElementById("header-1").textContent = "Ready?";
+  document.getElementById("header-2").textContent = "Choose rock, paper or scissors to start!";
 }
