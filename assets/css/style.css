@@ -112,3 +112,26 @@ img.hidden {
   transform: scale(0.9);
 }
 
+@keyframes rps-bang-left {
+  0%, 100% { transform: rotate(0deg); }
+  25% { transform: rotate(30deg); }   /* swing downward */
+  50% { transform: rotate(0deg); }    /* back up */
+  75% { transform: rotate(30deg); }   /* second bang */
+}
+
+@keyframes rps-bang-right {
+  0%, 100% { transform: rotate(0deg); }
+  25% { transform: rotate(-30deg); }  /* mirrored swing downward */
+  50% { transform: rotate(0deg); }
+  75% { transform: rotate(-30deg); }
+}
+
+.shaking-left {
+  animation: rps-bang-left 1s ease-in-out;
+  transform-origin: bottom left; /* pivot at elbow side */
+}
+
+.shaking-right {
+  animation: rps-bang-right 1s ease-in-out;
+  transform-origin: bottom right;  /* mirrored pivot at elbow side */
+}

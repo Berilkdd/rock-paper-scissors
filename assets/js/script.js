@@ -17,6 +17,15 @@ document.getElementById("restart-btn").addEventListener("click", restartGame);
 });
 
 function getPlayerChoice(choice) {
+showOnlyLeft("rock");
+showOnlyRight("rock");
+  
+document.querySelector("#rock-left").classList.add("shaking-left");
+document.querySelector("#rock-right").classList.add("shaking-right");
+
+setTimeout(() => {
+document.querySelector("#rock-left").classList.remove("shaking-left");
+document.querySelector("#rock-right").classList.remove("shaking-right");
   
 showOnlyLeft(choice);
 
@@ -26,6 +35,7 @@ updateScore(result);
 updateMessage(result);
 
 console.log(choice, computerChoice, result);
+},900);
 }
 
 
@@ -85,8 +95,7 @@ function updateScore(result) {
 function updateMessage(result) {
   const header1 = document.getElementById("header-1");
   const header2 = document.getElementById("header-2");
-  const playerMessage = document.getElementById("player-message");
-
+  
   if (result === "win") {
     header1.textContent = "VICTORY!";
     header2.textContent = "YOU CRUSHED THE COMPUTER";
