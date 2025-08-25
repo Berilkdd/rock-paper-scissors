@@ -49,6 +49,13 @@ margin: 6px 0 10px;
   margin: 0 auto;
 }
 
+#rock-left,
+#rock-right {
+  --hand-scale: 0.85;  
+  transform: scale(var(--hand-scale));   
+  transform-origin: center; 
+}
+
 .hands-row {
   display: flex;
   justify-content: space-between; 
@@ -83,7 +90,7 @@ margin: 6px 0 10px;
 }
 
 img.hidden {
-  display: none !important;
+  display: none;
 }
 
 .restart{
@@ -112,26 +119,19 @@ img.hidden {
   transform: scale(0.9);
 }
 
-@keyframes rps-bang-left {
-  0%, 100% { transform: rotate(0deg); }
-  25% { transform: rotate(30deg); }   /* swing downward */
-  50% { transform: rotate(0deg); }    /* back up */
-  75% { transform: rotate(30deg); }   /* second bang */
+@keyframes rps-bounce-3 {
+  0%   { transform: scale(var(--hand-scale)) translateY(0); }
+  16%  { transform: scale(var(--hand-scale)) translateY(-60px); }
+  33%  { transform: scale(var(--hand-scale)) translateY(0); }
+
+  50%  { transform: scale(var(--hand-scale)) translateY(-60px); }
+  66%  { transform: scale(var(--hand-scale)) translateY(0); }
+
+  83%  { transform: scale(var(--hand-scale)) translateY(-60px); }
+  100% { transform: scale(var(--hand-scale)) translateY(0); } /* <-- result change here */
 }
 
-@keyframes rps-bang-right {
-  0%, 100% { transform: rotate(0deg); }
-  25% { transform: rotate(-30deg); }  /* mirrored swing downward */
-  50% { transform: rotate(0deg); }
-  75% { transform: rotate(-30deg); }
-}
-
-.shaking-left {
-  animation: rps-bang-left 1s ease-in-out;
-  transform-origin: bottom left; /* pivot at elbow side */
-}
-
+.shaking-left,
 .shaking-right {
-  animation: rps-bang-right 1s ease-in-out;
-  transform-origin: bottom right;  /* mirrored pivot at elbow side */
+  animation: rps-bounce-3 1s linear forwards;
 }
