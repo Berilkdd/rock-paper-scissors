@@ -90,12 +90,14 @@ margin: 6px 0 10px;
 .choice-btn {
   width: 40px;               
   height: 40px;
-  object-fit: cover;
-  border: 2px solid #333;
-  border-radius: 30px;
-  padding: 6px;
+  object-fit: cover; 
   cursor: pointer;
+  border-radius: 50%;
+  overflow: hidden;       
+  display: inline-flex;  
+  transition: box-shadow 0.2s ease;
 }
+
 
 .choice-btn:hover {
   box-shadow: 0 4px 8px rgba(0,0,0,0.2);
