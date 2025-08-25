@@ -1,6 +1,6 @@
 /* CSS Variables */
 :root {
-    --primary-font: "Inter", sans-serif; 
+    --primary-font: "Kirang Haerang", system-ui; 
 }
 
 h1 {
@@ -8,7 +8,7 @@ h1 {
   font-size: 22px;
   letter-spacing: 1px;
   text-transform: uppercase;
-  font-family: "Kirang Haerang", system-ui;
+  font-family: var(--primary-font);
   text-align: center;
 }
 
@@ -18,7 +18,7 @@ h2 {
   text-transform: lowercase;
   letter-spacing: 1px;
   opacity: 0.8;
-  font-family: "Kirang Haerang", system-ui;
+  font-family: var(--primary-font);
   text-align: center;
 }
 
@@ -27,7 +27,7 @@ margin: 6px 0 10px;
   font-size: 15px;
   letter-spacing: 1px;
   text-transform: uppercase;
-  font-family: "Kirang Haerang", system-ui;
+  font-family: var(--primary-font);
   text-align: center;
 }
 
@@ -98,7 +98,6 @@ margin: 6px 0 10px;
   transition: box-shadow 0.2s ease;
 }
 
-
 .choice-btn:hover {
   box-shadow: 0 4px 8px rgba(0,0,0,0.2);
 }
@@ -115,18 +114,18 @@ img.hidden {
   display: flex;
   justify-content: center;   
   align-items: center;
-
 }
 
 #restart-btn {
   margin-top: 16px;
   padding: 8px 16px;
   font-size: 14px;
-  font-family: inherit;
-  border: 2px solid #333;
+  font-family: var(--primary-font);
+  border: 1px solid #333;
+  background: white;
   border-radius: 30px;
   cursor: pointer;
-  transition: background-color 0.2s ease;
+  transition: 0.2s ease;
 }
 
 #restart-btn:hover {
