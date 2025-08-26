@@ -143,3 +143,90 @@ img.hidden {
 .shaking-right {
   animation: rps-bounce-3 1s linear forwards;
 }
+
+/* Tablet screens (≥768px) */
+@media (min-width: 768px) {
+  h1 {
+    font-size: 28px;
+  }
+
+  h2 {
+    font-size: 18px;
+  }
+
+  p {
+    font-size: 16px;
+  }
+
+  .hands-row {
+    justify-content: space-evenly;
+    padding-top: 40px;
+    margin-bottom: 20px;
+  }
+
+  .player-side img,
+  .computer-side img {
+    max-width: 220px;
+  }
+
+  .choice-btn {
+    width: 60px;
+    height: 60px;
+  }
+
+  #restart-btn {
+    padding: 10px 20px;
+    font-size: 16px;
+  }
+}
+
+/* Desktop / Large screens (≥1024px) */
+@media (min-width: 1024px) {
+  body {
+    max-width: 1000px;
+    margin: 0 auto;
+  }
+
+  h1 {
+    font-size: 36px;
+  }
+
+  h2 {
+    font-size: 22px;
+  }
+
+  p {
+    font-size: 18px;
+  }
+
+  .hands-row {
+    min-height: 250px;
+    margin-bottom: 30px;
+  }
+
+  .player-side img,
+  .computer-side img {
+    max-width: 280px;
+  }
+
+  .choices {
+    gap: 32px;
+    margin: 24px 0;
+  }
+
+  .choice-btn {
+    width: 80px;
+    height: 80px;
+  }
+
+  #scoreboard {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+  }
+
+  #restart-btn {
+    padding: 12px 28px;
+    font-size: 18px;
+  }
+}
