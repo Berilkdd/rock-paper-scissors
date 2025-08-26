@@ -93,6 +93,10 @@ margin: 6px 0 10px;
   transform: scale(0.9);
 }
 
+.choice-btn:focus-visible {
+  box-shadow: 0 4px 8px gray;
+}
+
 img.hidden {
   display: none;
 }
