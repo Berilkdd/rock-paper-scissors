@@ -112,6 +112,7 @@ img.hidden {
   padding: 8px 16px;
   font-size: 14px;
   font-family: var(--primary-font);
+  color: #000;
   border: 1px solid gray;
   background: white;
   border-radius: 30px;
