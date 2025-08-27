@@ -58,11 +58,20 @@ margin: 6px 0 10px;
   margin-bottom: 16px;     
 }
 
+.hand {
+  --hand-scale: 1;
+  --flip: 1;             
+  transform: scaleX(var(--flip)) scale(var(--hand-scale));
+  transform-origin: center;
+}
+
+.mirror {
+  --flip: -1;
+}
+
 #rock-left,
 #rock-right {
   --hand-scale: 0.85;  
-  transform: scale(var(--hand-scale));   
-  transform-origin: center; 
 }
 
 .choices {
@@ -129,15 +138,15 @@ img.hidden {
 }
 
 @keyframes rps-bounce-3 {
-  0%   { transform: scale(var(--hand-scale)) translateY(0); }
-  16%  { transform: scale(var(--hand-scale)) translateY(-60px); }
-  33%  { transform: scale(var(--hand-scale)) translateY(0); }
+  0%   { transform: scaleX(var(--flip)) scale(var(--hand-scale)) translateY(0); }
+  16%  { transform: scaleX(var(--flip)) scale(var(--hand-scale)) translateY(-60px); }
+  33%  { transform: scaleX(var(--flip)) scale(var(--hand-scale)) translateY(0); }
 
-  50%  { transform: scale(var(--hand-scale)) translateY(-60px); }
-  66%  { transform: scale(var(--hand-scale)) translateY(0); }
+  50%  { transform: scaleX(var(--flip)) scale(var(--hand-scale)) translateY(-60px); }
+  66%  { transform: scaleX(var(--flip)) scale(var(--hand-scale)) translateY(0); }
 
-  83%  { transform: scale(var(--hand-scale)) translateY(-60px); }
-  100% { transform: scale(var(--hand-scale)) translateY(0); } 
+  83%  { transform: scaleX(var(--flip)) scale(var(--hand-scale)) translateY(-60px); }
+  100% { transform: scaleX(var(--flip)) scale(var(--hand-scale)) translateY(0); } 
 }
 
 .shaking-left,
