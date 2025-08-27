@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rock-Paper-Scissors</title>
+
+    <!-- favicon -->
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="assets/rps-favicon-32x32.png"
+    >
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="assets/rps-favicon-16x16.png"
+    >
+
+    <!-- font awesome and google fonts -->
+    <script src="https://kit.fontawesome.com/c1eb0bcc3f.js" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Kirang+Haerang&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+    <h1 id="header-1">Ready?</h1>
+    <h2 id="header-2">Choose rock, paper or scissors to start!</h2>
+    
+    <div class="game-area">
+    <div class="hands-row">
+    <div class="player-side">
+        <img id="rock-left" class="hand" src="assets/images/rock-left.png" alt="Rock Left">
+        <img id="paper-left" class="hidden hand" src="assets/images/paper-left.png" alt="Paper Left">
+        <img id="scissors-left" class="hidden hand" src="assets/images/scissors-left.png" alt="Scissors Left">
+    </div>
+
+    <div class="computer-side">
+        <img id="rock-right" class="mirror hand" src="assets/images/rock-left.png" alt="Rock Right">
+        <img id="paper-right" class="hidden mirror hand" src="assets/images/paper-left.png" alt="Paper Right">
+        <img id="scissors-right" class="hidden mirror hand" src="assets/images/scissors-left.png" alt="Scissors Right">
+    </div>
+    </div>
+
+    <div class="choices-area">
+    <p id="player-message">Make your move!</p>
+    <div class="choices">
+        <img src="assets/images/rock-button.png" id="rock" alt="Rock" class="choice-btn" tabindex="0">
+        <img src="assets/images/paper-button.png" id="paper" alt="Paper" class="choice-btn" tabindex="0">
+        <img src="assets/images/scissors-button.png" id="scissors" alt="Scissors" class="choice-btn" tabindex="0">
+    </div>
+    </div>
+
+    <div id="scoreboard">
+        <p>WON: <span id="player-score">0</span></p>
+        <p>LOST: <span id="computer-score">0</span></p>
+        <p>DRAW: <span id="draw-score">0</span></p>
+    </div>
+
+    <div class="restart">
+    <button id="restart-btn">Restart Game</button>
+    </div>
+
+    </div>    
+
+    <script src="assets/js/script.js"></script>
+
+</body>
+</html>
