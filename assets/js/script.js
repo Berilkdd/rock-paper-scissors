@@ -1,3 +1,6 @@
+/* jshint esversion: 6, browser: true, strict: global */
+"use strict";
+
 let playerScore = 0;
 let computerScore = 0;
 let drawScore = 0;
@@ -37,8 +40,6 @@ function getPlayerChoice(choice) {
     const result = getResult(choice, computerChoice);
     updateScore(result);
     updateMessage(result);
-
-    console.log(choice, computerChoice, result);
   }, 900);
 }
 
