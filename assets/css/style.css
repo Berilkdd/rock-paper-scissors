@@ -240,3 +240,10 @@ img.hidden {
     font-size: 18px;
   }
 }
+
+.center-404 {
+  display: grid;
+  place-items: center;
+  height: 100vh;
+  font-family: var(--primary-font);
+}
